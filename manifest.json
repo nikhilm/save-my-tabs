@@ -1,6 +1,6 @@
 {
     "name": "Save My Tabs",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Save list of open tabs to Dropbox",
     "background": {
         "page": "background.html",
