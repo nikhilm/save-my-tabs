@@ -5,7 +5,6 @@ window.onload = function() {
     chrome.storage.local.get(['dropboxToken'], function(result) {
         var existingToken = result.dropboxToken;
         if (existingToken) {
-            console.log("Already have a token of length ", existingToken.length);
             document.getElementById('auth-link').style.visibility = "hidden";
             document.getElementById('auth-notice').style.visibility = "visible";
             return;

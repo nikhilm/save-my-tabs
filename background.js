@@ -5,7 +5,6 @@ function saveTabs() {
         var token = result.dropboxToken;
         Dropbox.setAccessToken(token);
         var filename = '/ChromeTabs.txt';
-        //Dropbox.filesListFolder({path:''}).then(console.log, console.error);
         chrome.tabs.query({
             status: "complete",
             url: ['http://*/*', 'https://*/*'],
@@ -17,9 +16,7 @@ function saveTabs() {
                 contents: contents,
                 mode: { '.tag': 'overwrite' },
             })
-            .then(function(results) {
-                console.log("Saved!");
-            }, console.error);
+            .then(function(results) {}, console.error);
         });
     });
 }
