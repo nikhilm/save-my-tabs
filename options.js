@@ -14,7 +14,7 @@ window.onload = function() {
 
 function authWithDropbox(e) {
     e.preventDefault();
-    var authUrl = Dropbox.getAuthenticationUrl(`https://{chrome.runtime.id}.chromiumapp.org/dropbox`);
+    var authUrl = Dropbox.getAuthenticationUrl(`https://${chrome.runtime.id}.chromiumapp.org/dropbox`);
     chrome.identity.launchWebAuthFlow({
         'url': authUrl,
         'interactive': true,
